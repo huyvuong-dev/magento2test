@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+<!--            <block class="Magento\Customer\Block\Account\Dashboard\Info" name="customer_account_dashboard_info" as="info" template="Magento_Customer::account/dashboard/info.phtml" cacheable="false">-->
+<!--                <container name="customer.account.dashboard.info.extra">-->
+<!--                    <block class="Magento\Customer\Block\Account\Dashboard\Info" name="customer.account.dashboard.info.extra.username.login" template="Magenest_Movie::account/dashboard/info.phtml"/>-->
+<!--                </container>-->
+<!--            </block>-->
+<!--            <block class="Magento\Customer\Model\Customer" name="customer_address_dashboard_info" as="info" template="Magento_Customer::account/dashboard/info.phtml" cacheable="false">-->
+<!--                <container name="customer.address.dashboard.info.extra">-->
+<!--                    <block class="Magento\Customer\Model\Customer" name="customer.address.dashboard.info.extra.username.login" template="Magenest_Movie::account/dashboard/info.phtml"/>-->
+<!--                </container>-->
+<!--            </block>-->
+            <block class="Magenest\Movie\Block\CustomerInfo"
+                   name="customer_account_dashboard" template="Magenest_Movie::account/dashboard/info.phtml" />
+        </referenceContainer>
+    </body>
+</page>

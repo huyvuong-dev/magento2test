@@ -1,0 +1,34 @@
+
+<?php
+/**
+ * @var Magenest\Movie\Block\MovieList1 $this
+ */
+$movies = $this->getMovies1();
+
+?>
+<table class="data table" id="test-data-table">
+    <caption class="table-caption">Movie Information</caption>
+    <thead>
+    <tr>
+        <th scope="col" class="col stt">STT</th>
+        <th scope="col" class="col name">Movie</th>
+        <th scope="col" class="col description">Description</th>
+        <th scope="col" class="col rating">Rating</th>
+        <th scope="col" class="col director">Director</th>
+        <th scope="col" class="col Actor">Actor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php $stt = 1;?>
+    <?php foreach ($movies as $data): ?>
+        <tr>
+            <td data-th="stt" class="col stt"><?php echo $stt++; ?></td>
+            <td data-th="name" class="col name"><?php echo $data->getMovieName(); ?></td>
+            <td data-th="description" class="col description"><?php echo $data->getDescription(); ?></td>
+            <td data-th="rating" class="col rating"><?php echo $data->getRating(); ?></td>
+            <td data-th="director" class="col director"><?php echo $data->getDirectorName(); ?></td>
+            <td data-th="actor" class="col director"><?php echo $data->getActorName(); ?></td>
+        </tr>
+    <?php  endforeach; ?>
+    </tbody>
+</table>

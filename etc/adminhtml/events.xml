@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+<!--    <event name="adminhtml_customer_save_after">-->
+<!--        <observer name="check_customer_name" instance="Magenest\Movie\Observer\ChangeCustomerFirstName" />-->
+<!--    </event>-->
+<!--    <event name="change_rating_movie">-->
+<!--        <observer name="rating" instance="Magenest\Movie\Observer\ChangeRatingMovie" />-->
+<!--    </event>-->
+
+</config>

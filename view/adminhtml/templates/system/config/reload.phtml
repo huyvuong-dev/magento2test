@@ -1,0 +1,12 @@
+<?php
+/**
+ * @var Magenest\Movie\Block\Adminhtml\System\Config\Reload $block
+ */
+echo $block->getButtonHtml(); ?>
+<script type="text/javascript">
+    require([ 'jquery', 'jquery/ui'], function($){
+        $(document).on("click","#button", function() {
+            location.reload();
+        });
+    });
+</script>

@@ -1,0 +1,53 @@
+<button id="open_modal" type="button">Open Modal</button>
+<button type="login" onclick="alert('hello')">Open Magento Login Modal</button>
+<button type="custom_login" onclick="alert('hello')">Open Custom Login Modal</button>
+
+<!--<script type="text/javascript">-->
+<!--    require([ 'jquery', 'jquery/ui'], function($){-->
+<!--        $(document).on("click","#open_modal", function() {-->
+<!--            alert('Hello World!');-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+<!--------------------magento alert modal------------------->
+<script type="text/javascript">
+    require(['jquery',
+        'Magento_Ui/js/modal/alert'], function($){
+        $('#open_modal').alert({
+            title: $.mage.__('Some title'),
+            content: $.mage.__('Some content'),
+        });
+    });
+</script>
+
+<div id="element">
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <span>Title 1</span>
+        </div>
+    </div>
+    <div data-role="content">Content 1</div>
+
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <span>Title 2</span>
+        </div>
+    </div>
+    <div data-role="content">Content 2</div>
+
+    <div data-role="collapsible">
+        <div data-role="trigger">
+            <span>Title 3</span>
+        </div>
+    </div>
+    <div data-role="content">Content 3</div>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'accordion'], function ($) {
+        $("#element").accordion();
+    });
+</script>

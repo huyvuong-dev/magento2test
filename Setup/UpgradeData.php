@@ -70,7 +70,8 @@ class UpgradeData implements UpgradeDataInterface
                 'visible' => true,
                 'position' => 200,
                 'system' => false,
-                'backend' => ''
+                'backend' => '',
+                'default' => 'http://localhost/magento2/pub/media/customer/index.png'
             ]
         );
 

@@ -38,7 +38,7 @@ class MassDelete extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-        $ids = $this->getRequest()->getParam('selected');
+        $ids = $this->getRequest()->getParams('selected');
         foreach ($ids as $id){
             $movie = $this->_objectManager->create(Movie::class)->load($id);
             $movie->delete();

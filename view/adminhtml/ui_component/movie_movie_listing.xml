@@ -187,7 +187,7 @@
         </column>
 
         <!-- Column ID director -->
-        <column name="director_id">
+        <column name="director_id" class="Magenest\Movie\Ui\Component\Listing\Column\DirectorName">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">textRange</item>

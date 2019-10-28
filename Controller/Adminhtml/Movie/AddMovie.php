@@ -20,8 +20,8 @@ class AddMovie extends \Magento\Backend\App\Action
         if(is_array($movieDatas)) {
             $movie = $this->_objectManager->create(Movie::class);
             $movie->setData($movieDatas);
-            //$contact->setData($movieDatas)->save();
-            $this->_eventManager->dispatch('change_rating_movie', ['movie' => $movie]);
+            $movie->setData($movieDatas)->save();
+//            $this->_eventManager->dispatch('change_rating_movie', ['movie' => $movie]);
             $resultRedirect = $this->resultRedirectFactory->create();
             return $resultRedirect->setPath('*/*/index');
         }

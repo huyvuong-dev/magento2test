@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var Magenest\Movie\Block\Adminhtml\First\ShowNumberOfModule $block
+ */
+    $countM = 1;
+    $arr = array();
+    foreach ($block->getNumberOfModule() as $value){
+        echo $countM . ' | '. $value.'<br>';
+        $countM++;
+    }
+    echo "<strong>Numbers of module installed in Magento: </strong>". count($block->getNumberOfModule()).'<hr>';
+
+    $countV = 1;
+    foreach ($block->getNumberOfModuleAnother() as $value){
+        echo $countV . ' | '.$value.'<br>';
+        $countV++;
+    }
+    echo "<strong>Numbers of module installed in Magneto but belonged to another Vendor (not Magento): </strong>". count($block->getNumberOfModuleAnother());
+
+?>

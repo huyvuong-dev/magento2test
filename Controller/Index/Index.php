@@ -6,7 +6,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\UpgradeDataInterface;
 class Index extends \Magento\Framework\App\Action\Action
 {
-    /** @var \Magento\Framework\View\Result\PageFactory
+    /** @var \Magento\Framework\View\Result\PageddFactory
     protected $resultPageFactory;
      */
     public function __construct(\Magento\Framework\App\Action\Context $context, \Magento\Framework\View\Result\PageFactory $resultPageFactory) {

@@ -22,5 +22,4 @@ class GetConfig extends AbstractHelper
     {
         return $this->getConfigValue(self::XML_PATH_HELLOWORLD .'moviepage/'. $code, $storeId);
     }
-
 }

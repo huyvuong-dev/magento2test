@@ -35,5 +35,33 @@
                 action="movie/actor/index"
                 resource="Magenest_Movie::actor"
         />
+
+        <add
+                id="Magenest_Movie::integration"
+                title="Integration"
+                module="Magenest_Movie"
+                sortOrder="55"
+                resource="Magenest_Movie::integration"
+        />
+
+        <add
+                id="Magenest_Movie::1st"
+                title="1st content container"
+                sortOrder="10"
+                module="Magenest_Movie"
+                parent="Magenest_Movie::integration"
+                resource="Magenest_Movie::1st"
+                action="movie/first/index"
+        />
+
+        <add
+                id="Magenest_Movie::2nd"
+                title="2nd content container"
+                sortOrder="20"
+                module="Magenest_Movie"
+                parent="Magenest_Movie::integration"
+                resource="Magenest_Movie::2nd"
+                action="movie/second/index"
+        />
     </menu>
 </config>

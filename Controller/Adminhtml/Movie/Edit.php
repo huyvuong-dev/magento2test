@@ -21,8 +21,8 @@ class Edit extends \Magento\Backend\App\Action
         if(is_array($movieDatas)) {
             $contact = $this->_objectManager->create(Movie::class);
             $contact->setData($movieDatas);
-            //$contact->setData($movieDatas)->save();
-            $this->_eventManager->dispatch('change_rating_movie', ['movie' => $contact]);
+            $contact->setData($movieDatas)->save();
+            //$this->_eventManager->dispatch('change_rating_movie', ['movie' => $contact]);
             $resultRedirect = $this->resultRedirectFactory->create();
             return $resultRedirect->setPath('*/*/index');
         }

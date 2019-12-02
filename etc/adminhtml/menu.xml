@@ -55,11 +55,20 @@
         />
 
         <add
+                id="Magenest_Movie::promotion"
+                title="Promotion"
+                module="Magenest_Movie"
+                sortOrder="50"
+                parent="Magenest_Movie::integration"
+                resource="Magenest_Movie::promotion"
+        />
+
+        <add
                 id="Magenest_Movie::2nd"
                 title="2nd content container"
                 sortOrder="20"
                 module="Magenest_Movie"
-                parent="Magenest_Movie::integration"
+                parent="Magenest_Movie::promotion"
                 resource="Magenest_Movie::2nd"
                 action="movie/second/index"
         />

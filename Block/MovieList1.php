@@ -14,7 +14,6 @@ class MovieList1 extends \Magento\Framework\View\Element\Template
     ) {
         $this->_movie = $_movie;
         $this->_resource = $resource;
-
         parent::__construct(
             $context,
             $data

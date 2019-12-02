@@ -7,14 +7,17 @@ class CustomerInfo extends \Magento\Framework\View\Element\Template
     private $_customer;
     private $_customerSession;
     private $_address;
+    private $_customerInterface;
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \Magento\Customer\Block\Account\Dashboard\Info $info,
         \Magento\Customer\Api\CustomerRepositoryInterface $customerRepositoryInterface,
         \Magento\Customer\Model\Session $customerSession,
         \Magento\Customer\Api\AddressRepositoryInterface $address,
+        \Magento\Customer\Api\Data\CustomerInterface $customerInterface,
         array $data = []
     ) {
+        $this->_customerInterface = $customerInterface;
         $this->_address = $address;
         $this->_info = $info;
         $this->_customer = $customerRepositoryInterface;
@@ -40,6 +43,7 @@ class CustomerInfo extends \Magento\Framework\View\Element\Template
         $getPhone = '';
         $id = $this->_customerSession->getCustomer()->getId();
         $customerId = $this->_customer->getById($id);
+
         $address = $customerId->getDefaultBilling();
         if (!isset($address)){
             $getPhone = 'not found';
@@ -50,6 +54,7 @@ class CustomerInfo extends \Magento\Framework\View\Element\Template
     }
 
     public function getImage(){
+        $a=$this->_customerInterface->getAddresses();
         $getImg = '';
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         $mediaUrl = $objectManager->get('Magento\Store\Model\StoreManagerInterface')

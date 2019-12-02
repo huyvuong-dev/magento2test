@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-<!--    <update handle="styles"/>-->
+    <update handle="admin-2columns-leftcolumns"/>
 <body>
     <referenceContainer name="content">
         <block class="Magenest\Movie\Block\Adminhtml\Second\NumberOfEntity" template="Magenest_Movie::number_of_entity.phtml"/>

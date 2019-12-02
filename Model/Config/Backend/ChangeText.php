@@ -17,4 +17,5 @@ class ChangeText extends \Magento\Framework\App\Config\Value
 //            $this->setValue('Pong');
 //        }
 //    }
+
 }

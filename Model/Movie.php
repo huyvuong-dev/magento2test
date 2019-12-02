@@ -16,6 +16,7 @@ class Movie extends \Magento\Framework\Model\AbstractModel {
         parent::__construct($context, $registry, $resource,
             $resourceCollection, $data);
     }
+
     public function _construct() {
         $this->_init('Magenest\Movie\Model\ResourceModel\Movie');
     }

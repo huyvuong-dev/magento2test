@@ -50,9 +50,12 @@ class Cart
             if ($product->getTypeId() == Configurable::TYPE_CODE) {
                 $params = $subject->getRequest()->getParams();
                 $childProduct = $this->configurable->getProductByAttributes($params['super_attribute'], $product);
-                if ($childProduct->getId()) {
-                    $params['product'] = $childProduct->getId();
-                    $subject->getRequest()->setParams($params);
+                if ($childProduct){
+
+                    if ($childProduct->getId()) {
+                        $params['product'] = $childProduct->getId();
+                        $subject->getRequest()->setParams($params);
+                    }
                 }
             }
         }

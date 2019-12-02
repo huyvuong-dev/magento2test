@@ -1,24 +1,45 @@
 <?php
 /**@var Magenest\Movie\Block\Adminhtml\Second\NumberOfEntity $block*/
 
-    $countP = 1;
-    foreach ($block->getProductCollection() as $value)
-    {
-        echo $countP.' | '.$value->getData('name').'<br>';
-        $countP++;
-    }
-    $quantityP = $countP - 1;
-    echo '<strong>Numbers of product: </strong>' .$quantityP . '<br>';
-
+//    $countP = 1;
+//    foreach ($block->getProductCollection() as $value)
+//    {
+//        echo $countP.' | '.$value->getData('name').'<br>';
+//        $countP++;
+//    }
+//    $quantityP = $countP - 1;
+//    echo '<strong>Numbers of product: </strong>' .$quantityP . '<br>';
+//
     $countC = 1;
     foreach ($block->getCustomerCollection() as $value)
     {
-        echo $countC.' | '.$value->getData('email').'<br>';
+        //echo $countC.' | '.$value->getData('email').'<br>';
         $countC++;
     }
     $quantityC = $countC - 1;
-    echo "<strong>Numbers of customer: </strong>" . $quantityC .'<br>';
-    echo "<strong>Numbers of order: </strong>". $block->getNumbersOfOrder() . '<br>';
-    echo "<strong>Numbers of invoice: </strong>". $block->getNumbersOfInvoice() . '<br>';
-    echo "<strong>Numbers of credit memo: </strong>". $block->getNumbersOfCreditMemo() . '<br>';
+//    echo "<strong>Numbers of customer: </strong>" . $quantityC .'<br>';
+//    echo "<strong>Numbers of order: </strong>". $block->getNumbersOfOrder() . '<br>';
+//    echo "<strong>Numbers of invoice: </strong>". $block->getNumbersOfInvoice() . '<br>';
+//    echo "<strong>Numbers of credit memo: </strong>". $block->getNumbersOfCreditMemo() . '<br>';
+//    echo "<strong>Numbers of module installed in Magento: </strong>". $block->getNumberOfModule() . '<br>';
+//    echo "<strong>Numbers of module installed in Magneto but belonged to another Vendor (not Magento): </strong>". $block->getNumberOfModuleAnother() . '<br>';
+
 ?>
+<table style="width:100%">
+    <tr>
+        <td><?php echo "<strong>Numbers of module installed in Magento: </strong>". $block->getNumberOfModule() . '<br>';?></td>
+        <td><?php echo "<strong>Numbers of customer: </strong>" . $quantityC .'<br>';?></td>
+    </tr>
+    <tr>
+        <td><?php echo "<strong>Numbers of module installed in Magneto but belonged to another Vendor (not Magento): </strong>". $block->getNumberOfModuleAnother() . '<br>';?></td>
+        <td><?php echo "<strong>Numbers of order: </strong>". $block->getNumbersOfOrder() . '<br>';?></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><?php echo "<strong>Numbers of invoice: </strong>". $block->getNumbersOfInvoice() . '<br>';?></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><?php echo "<strong>Numbers of credit memo: </strong>". $block->getNumbersOfCreditMemo() . '<br>';?></td>
+    </tr>
+</table>

@@ -8,7 +8,9 @@ class NumberOfEntity extends \Magento\Framework\View\Element\Template
     protected $_orderFactory;
     protected $_invoiceFactory;
     protected $_creditMemoFactory;
+    protected $fullModuleList;
     public function __construct(
+        \Magento\Framework\Module\FullModuleList $fullModuleList,
         \Magento\Framework\View\Element\Template\Context $context,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
         \Magento\Customer\Model\CustomerFactory $customerFactory,
@@ -17,6 +19,7 @@ class NumberOfEntity extends \Magento\Framework\View\Element\Template
         \Magento\Sales\Model\ResourceModel\Order\Creditmemo\CollectionFactory $creditMemoFactory,
         array $data = []
     ) {
+        $this->fullModuleList = $fullModuleList;
         $this->_creditMemoFactory = $creditMemoFactory;
         $this->_invoiceFactory = $invoiceFactory;
         $this->_orderFactory = $orderFactory;
@@ -58,5 +61,29 @@ class NumberOfEntity extends \Magento\Framework\View\Element\Template
     public function getNumbersOfCreditMemo(){
         $credit  = $this->_creditMemoFactory->create()->count();
         return $credit;
+    }
+
+    public function getNumberOfModule(){
+        $arr = array();
+        $allModules = $this->fullModuleList->getNames();
+        foreach ($allModules as $value){
+            $sub = substr($value,0,7);
+            if ($sub == 'Magento'){
+                $arr[] = $value;
+            }
+        }
+        return count($arr);
+    }
+
+    public function getNumberOfModuleAnother(){
+        $arr = array();
+        $allModules = $this->fullModuleList->getNames();
+        foreach ($allModules as $value){
+            $sub = substr($value,0,7);
+            if ($sub != 'Magento'){
+                $arr[] = $value;
+            }
+        }
+        return count($arr);
     }
 }

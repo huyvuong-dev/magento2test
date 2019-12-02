@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+      layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <title>Movie Star</title>
     </head>
@@ -11,5 +11,10 @@
             <block class="Magenest\Movie\Block\MovieList1" name="movielist" template="Magenest_Movie::movielist.phtml">
             </block>
         </referenceContainer>
+        <referenceBlock name="movielist">
+            <arguments>
+                <argument name="field1" xsi:type="string"> <![CDATA[<h1>This is argument value</h1>]]></argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>

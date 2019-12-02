@@ -56,16 +56,7 @@
         <paging name="listing_paging"/>
         <exportButton name="export_button"/>
     </listingToolbar>
-    <!-- ... other block of code -->
-    <actionsColumn name="actions" class="Magenest\Movie\Ui\Component\Listing\Column\MovieActions">
-        <argument name="data" xsi:type="array">
-            <item name="config" xsi:type="array">
-                <item name="resizeEnabled" xsi:type="boolean">false</item>
-                <item name="resizeDefaultWidth" xsi:type="string">107</item>
-                <item name="indexField" xsi:type="string">movie_id</item>
-            </item>
-        </argument>
-    </actionsColumn>
+
     <!-- dataProvider, with a class tag to define the name of the object to be used. -->
     <dataSource name="movie_movie_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">

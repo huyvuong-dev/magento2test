@@ -6,7 +6,7 @@ class Movie extends \Magento\Framework\App\Action\Action {
         $movie->setName('Hai Phuong');
         $movie->setDescription('Hai Phuong Description');
         $movie->setRating('10');
-        $movie->setDirectorId('9');
+        $movie->setDirectorId('2');
         $movie->save();
         $this->getResponse()->setBody('success');
     }
